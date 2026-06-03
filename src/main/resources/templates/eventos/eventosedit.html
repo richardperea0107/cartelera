@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Eventos</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <link rel="stylesheet" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="latidos-fondo" aria-hidden="true">
+        <svg class="latido-svg latido-1" viewBox="0 0 3600 80" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="trazo-latido trazo-latido-1" d="M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40"></path>
+        </svg>
+        <svg class="latido-svg latido-2" viewBox="0 0 3600 80" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="trazo-latido trazo-latido-2" d="
+        M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40
+      "></path>
+        </svg>
+        <svg class="latido-svg latido-3" viewBox="0 0 3600 80" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="trazo-latido trazo-latido-3" d="
+        M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40
+      " />
+        </svg>
+    </div>
+    <header class="cabecera">
+        <nav class="navbar bg-body-tertiary mi-navegador">
+            <div class="container-fluid mi-contenedor">
+                <a class="navbar-brand mi-referencia" th:href="@{/}">
+                    <img th:src="@{/image/latidos.png}" class="logo-imagen" alt="Latidos Bejucaleños">
+                </a>
+                <div class="mi_mensaje">
+                    <h1 class="mi_mensaje_texto">LATIDOS BEJUCALEÑOS</h1>
+                </div>
+                <ul sec:authorize="hasRole('ADMIN')" class="menu-cartelera">
+                    <li><a class="menu-link" th:href="@{/usuarios/listar}">Usuarios</a></li>
+                    <li><a class="menu-link" th:href="@{/eventos/listar}">Eventos</a></li>
+                </ul>
+                <div class="login_inicio">
+                    <input type="checkbox" id="login-togle" hidden>
+                    <label for="login-togle" class="boton">
+                        <i class="bi bi-person icono_user "></i>
+                        <span class="login_user">LOGIN</span>
+                    </label>
+                    <div class="login_formulario-login">
+                        <div class="Title">INICIAR SESION</div>
+                        <form th:action="@{/login}" class="login_formulario-horizontal" method="post">
+                            <label class="form-label">
+                                <input type="text" name="username" class="form-control" placeholder="Usuarios">
+                            </label>
+                            <label class="form-label">
+                                <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                            </label>
+                            <button type="submit" class="form-button_registrarse">Registrarse</button>
+                        </form>
+                    </div>
+                </div>
+                <div sec:authorize="isAuthenticated()" class="logout_formulario">
+                    <form th:action="@{/logout}" method="post">
+                        <button type="submit" class="form-button_cerrar-sesion">
+                            <img th:src="@{/image/latidos-logo.png}" class="logout" alt="salir">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="retenedor">
+            <form class="col-lg-6 col-lg-offset-3 formulario" th:action="@{/eventos/actualizar}" th:object="${evento}"
+                method="post" enctype="multipart/form-data">
+                <input type="hidden" th:field="*{id}">
+                <div class="principal">
+                    <h1 class="principal-cabecera"> Adicionar Evento </h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <select th:field="*{dia_semana}" class="campo campo-fecha" required>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="campo" type="text" th:field="*{titulo}" placeholder="Título" required
+                            oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="campo" type="time" th:field="*{hora_inicio}" placeholder=" Hora-Inicio">
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="campo" type="text" th:field="*{lugar}" placeholder="Lugar" required
+                            oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);">
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="campo" type="time" th:field="*{hora_fin}" placeholder=" Hora-Fin">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="number" th:field="*{precio}" placeholder="Precio" class="campo" required min="0">
+                    </div>
+                    <div class="col-lg-6">
+                        <textarea class="campo campo-descripcion" th:field="*{descripcion}" placeholder="Descripción"
+                            required
+                            oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <input type="file" name="imagenFile" class="campo campo-archivo" accept="image/*">
+                    </div>
+                    <div class="col-lg-12">
+                        <input class="boton-guardar" type="submit" value="Actualizar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script th:src="@{/js/desapareceMensaje.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

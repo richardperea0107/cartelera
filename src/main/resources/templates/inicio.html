@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latidos Bejucaleños</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
+  <link rel="stylesheet" th:href="@{/css/normalize.css}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <div class="latidos-fondo" aria-hidden="true">
+    <svg class="latido-svg latido-1" viewBox="0 0 3600 80" preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="trazo-latido trazo-latido-1" d="M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40"></path>
+    </svg>
+    <svg class="latido-svg latido-2" viewBox="0 0 3600 80" preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="trazo-latido trazo-latido-2" d="
+        M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40
+      "></path>
+    </svg>
+    <svg class="latido-svg latido-3" viewBox="0 0 3600 80" preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="trazo-latido trazo-latido-3" d="
+        M0,40
+        L150,40 L180,40 L195,8 L210,72 L225,15 L240,62 L255,40
+        L400,40 L430,40 L445,8 L460,72 L475,15 L490,62 L505,40
+        L650,40 L680,40 L695,8 L710,72 L725,15 L740,62 L755,40
+        L900,40 L930,40 L945,8 L960,72 L975,15 L990,62 L1005,40
+        L1150,40 L1180,40 L1195,8 L1210,72 L1225,15 L1240,62 L1255,40
+        L1400,40 L1430,40 L1445,8 L1460,72 L1475,15 L1490,62 L1505,40
+        L1650,40 L1680,40 L1695,8 L1710,72 L1725,15 L1740,62 L1755,40
+        L1900,40 L1930,40 L1945,8 L1960,72 L1975,15 L1990,62 L2005,40
+        L2150,40 L2180,40 L2195,8 L2210,72 L2225,15 L2240,62 L2255,40
+        L2400,40 L2430,40 L2445,8 L2460,72 L2475,15 L2490,62 L2505,40
+        L2650,40 L2680,40 L2695,8 L2710,72 L2725,15 L2740,62 L2755,40
+        L2900,40 L2930,40 L2945,8 L2960,72 L2975,15 L2990,62 L3005,40
+        L3150,40 L3180,40 L3195,8 L3210,72 L3225,15 L3240,62 L3255,40
+        L3400,40 L3430,40 L3445,8 L3460,72 L3475,15 L3490,62 L3505,40
+        L3600,40
+      " />
+    </svg>
+  </div>
+  <header class="cabecera">
+    <nav class="navbar bg-body-tertiary mi-navegador">
+      <div class="container-fluid mi-contenedor">
+        <a class="navbar-brand mi-referencia" th:href="@{/}">
+          <img th:src="@{/image/latidos.png}" class="logo-imagen" alt="Latidos Bejucaleños">
+        </a>
+        <div class="mi_mensaje">
+          <h1 class="mi_mensaje_texto">LATIDOS BEJUCALEÑOS</h1>
+        </div>
+        <ul sec:authorize="hasRole('ADMIN')" class="menu-cartelera">
+          <li><a class="menu-link" th:href="@{/usuarios/listar}">Usuarios</a></li>
+          <li><a class="menu-link" th:href="@{/eventos/listar}">Eventos</a></li>
+        </ul>
+        <div class="login_inicio">
+          <input type="checkbox" id="login-togle" hidden>
+          <label for="login-togle" class="boton">
+            <i class="bi bi-person icono_user "></i>
+            <span class="login_user">LOGIN</span>
+          </label>
+          <div class="login_formulario-login">
+            <div class="Title">INICIAR SESION</div>
+            <form th:action="@{/login}" class="login_formulario-horizontal" method="post">
+              <label class="form-label">
+                <input type="text" name="username" class="form-control" placeholder="Usuarios">
+                <i class="bi bi-person usuario-person"></i>
+              </label>
+              <label class="form-label">
+                <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                <i class="bi bi-eye-slash contrasena-toggle" id="toggleContrasena"></i>
+              </label>
+              <button type="submit" class="form-button_registrarse">Registrarse</button>
+            </form>
+          </div>
+          <div class="sidebar-login_formulario">
+            <div class="sidebar-header">
+              <span class="titulo-sidebar">INICIAR SESION</span>
+              <label for="login-togle" class="cerrar-sidebar">
+                <i class="bi bi-x-lg"></i>
+              </label>
+            </div>
+            <form th:action="@{/login}" method="post" class="sidebar-form">
+              <label class="sidebar-label">
+                <input type="text" name="username" class="campo-sidebar" placeholder="Usuarios">
+
+              </label>
+              <label class="sidebar-label">
+                <input type="password" name="password" class="campo-sidebar" placeholder="Contraseña">
+
+              </label>
+              <button type="submit" class="sidebar-button_registrarse"> Registrarse </button>
+            </form>
+          </div>
+          <label for="login-togle" class="overlay-sidebar"></label>
+        </div>
+        <div sec:authorize="isAuthenticated()" class="logout_formulario">
+          <form th:action="@{/logout}" method="post">
+            <button type="submit" class="form-button_cerrar-sesion">
+              <img th:src="@{/image/latidos-logo.png}" class="logout" alt="salir">
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div aria-hidden="true">
+      <div class="particula" style="width:4px;height:4px;left:8%;background:#f4a261;--dur:5s;--delay:0s;"></div>
+      <div class="particula" style="width:3px;height:3px;left:22%;background:#01bcf3;--dur:7s;--delay:1.5s;"></div>
+      <div class="particula" style="width:5px;height:5px;left:38%;background:#f4a261;--dur:4s;--delay:0.5s;"></div>
+      <div class="particula" style="width:3px;height:3px;left:55%;background:#01bcf3;--dur:6s;--delay:2s;"></div>
+      <div class="particula" style="width:4px;height:4px;left:70%;background:#f4a261;--dur:5.5s;--delay:1s;"></div>
+      <div class="particula" style="width:3px;height:3px;left:85%;background:#01bcf3;--dur:6.5s;--delay:0.8s;"></div>
+    </div>
+    <section class="cuerpo">
+      <h2 class="cartelera-titulo">Cartelera de la Semana</h2>
+      <p class="cartelera-subtitulo">eventos &middot; cultura &middot; deporte</p>
+      <div class="container-fluid px-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4  cartas-principal">
+          <div class="col col-personalizado" th:each="eventos:${eventos}">
+            <div class="card">
+              <img th:src="@{/eventos/imagen/{id}(id=${eventos.id})}" class="card-img-top evento-img"
+                alt="imagen evento" />
+              <div class="card-body evento-card-body">
+                <h5 class="card-title evento-card-titulo" th:text="${eventos.titulo}"></h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <i class="bi bi-calendar-event"></i>
+                  <span class="evento-dia" th:text="${eventos.dia_semana}"></span>
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-clock"></i>
+                  <span class="evento-horario" th:text=" ${eventos.hora_inicio}  + ' - ' +  ${eventos.hora_fin}"></span>
+                </li>
+                <li class="list-group-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span class="evento-lugar" th:text="${eventos.lugar}"></span>
+                </li>
+                <li class="list-group-item">
+                  <i class=" bi bi-currency-dollar">
+                    <span class="evento-precio" th:text="${eventos.precio}"></span>
+                  </i>
+                </li>
+              </ul>
+              <div class="card-body evento-card-body descripcion">
+                <span class="evento-descripcion" th:text="${eventos.descripcion}"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleContrasena = document.getElementById('toggleContrasena');
+      if (toggleContrasena) {
+        toggleContrasena.addEventListener('click', function () {
+          const input = this.previousElementSibling;
+          if (input && input.tagName === 'INPUT') {
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash')
+          }
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>
