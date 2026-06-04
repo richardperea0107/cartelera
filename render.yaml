@@ -3,7 +3,7 @@ services:
     name: cartelera
     runtime: java
     buildCommand: mvn clean package
-    startCommand: java -jar target/*.jar
+    startCommand: java -jar target/cartelera-0.0.1-SNAPSHOT.jar
     envVars:
       - key: PORT
         value: 8080
